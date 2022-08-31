@@ -2194,13 +2194,13 @@ input[type="radio"]+label:before {
 		margin-top: 10%;
 		
 	}
-	img.izquierda:hover{
-		transform:translateX(90px) scale(2.2); 
+	img.izquierda:hover {
+		transform:translateX(99px) scale(2); 
 		position: absolute;
 		z-index: 10000;
 	}
 	img.derecha:hover{
-		transform:translateX(-90px) scale(2.2); 
+		transform:translateX(-99px) scale(2); 
 		position: absolute;
 		z-index: 10000;
 	}
@@ -2222,7 +2222,16 @@ input[type="radio"]+label:before {
 	}
 	.row>.col-4 {
 		width: 46%;
+		margin-bottom: 1in;
 		text-align: center;
+	}
+	.precio{
+		margin-left: 14%;
+		margin-top: -20px;
+		margin-bottom: 5px;
+		font-weight: bold;
+		letter-spacing: 2px;
+
 	}
 }
 /* List */
@@ -3205,16 +3214,21 @@ body.is-menu-visible #menu {
 #header {
 	background: #2e3842;
 	height: 3em;
-	left: 20;
+	left: 15;
 	line-height: 3em;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 10000;
-	text-align: center;
+}
+#header .Logo{
+	margin-left: 40px;
+	margin-right: 400px;
+	width: 140px; float:left;
 }
 
 #header a {
+    text-align: center;
 	font-weight: bold;
 	word-spacing: 30px;
 	padding: 18px;
@@ -3222,8 +3236,15 @@ body.is-menu-visible #menu {
 }
 
 @media screen and (max-width: 736px) {
-	#header h1 a {
+	#header a {
 		font-size: 1em;
+	}
+	#header .Logo{
+		margin-right: 10%;
+		margin-left: 10px;
+		margin-top: -6px;
+		width: 140px; 
+		float:left;
 	}
 }
 
@@ -3680,4 +3701,20 @@ body.is-mobile.landing #footer {
 	margin-top:4%;
 	margin-left: 0.5%;
 	margin-right: 0.5%;
+}
+@media screen and (max-width: 736px) {
+
+.logoInsta{
+	width: 15%;
+	margin-top:0%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.logoWa{
+	width: 15%;
+	margin-top:0%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
 }

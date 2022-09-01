@@ -1047,14 +1047,6 @@ input[type="radio"]+label:before {
 	}
 
 	.btnComprar {
-		/* background-color: red; */
-		width: 100px;
-		font-size: 8px;
-		padding: 0;
-		margin-left: 10%;
-		text-align: center;
-	}
-	.btnComprar {
 		padding: 15px 25px;
 		border: unset;
 		border-radius: 15px;

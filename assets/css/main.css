@@ -1102,35 +1102,31 @@ input[type="radio"]+label:before {
 		width: 100%;
 		margin-bottom: 0.5in;
 		text-align: center;
-		
 	}
 
 	#tallaS .col-4 {
 		width: 100%;
 		margin-bottom: 1in;
 		text-align: center;
-		margin-right: 8%;
 	}
 
 	#tallaM .col-4 {
 		width: 100%;
 		margin-bottom: 1in;
 		text-align: center;
-		margin-right: 8%;
 	}
 
 	#tallaL .col-4 {
 		width: 100%;
 		margin-bottom: 1in;
 		text-align: center;
-		margin-right: 8%;
 	}
 
 	#tallaXL .col-4 {
 		width: 100%;
 		margin-bottom: 1in;
 		text-align: center;
-		margin-right: 8%;
+		
 	}
 
 	.precio {

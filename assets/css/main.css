@@ -527,7 +527,7 @@ pre code {
 
 .row.gtr-50 {
 	margin-top: 0;
-	margin-left: -0.75em;
+	margin-left: 0;
 }
 
 .row.gtr-50>* {
@@ -1039,13 +1039,17 @@ input[type="radio"]+label:before {
 		margin-top: 15%;
 
 	}
-
-	.zoomImageProduct:hover {
-		transform: scale(2);
+	
+	.zoomImageProduct:active {
+		transform: scale(1.5);
 		position: absolute;
 		z-index: 10000;
 	}
-
+	
+	#menudesplegable{
+		width: 100%;
+		margin: 2%;
+	}
 	.btnComprar {
 		padding: 15px 25px;
 		border: unset;
@@ -1090,7 +1094,7 @@ input[type="radio"]+label:before {
 		width: 100%;
 		margin-bottom: 1in;
 		text-align: center;
-		margin-right: 8%;
+		
 	}
 
 	#tallaS .col-4 {
@@ -1135,8 +1139,8 @@ input[type="radio"]+label:before {
 		flex-wrap: wrap;
 		box-sizing: border-box;
 		align-items: stretch;
-		padding-left: 8%;
-		padding-right: 2%;
+		
+		
 	}
 
 }
@@ -2925,8 +2929,8 @@ margin: 2%;
 
 @media screen and (max-width: 736px) {
 	#menudesplegable{
-		width: 90%;
-		margin: 2%;
+		width: 100%;
+		
 		}
 		.desplegableniños{
 			text-align: center;

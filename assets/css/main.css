@@ -1043,7 +1043,8 @@ input[type="radio"]+label:before {
 		width: 80%;
 		margin-left: 10%;
 		margin-top: 15%;
-
+		border-radius: 30px;
+		border: 1px solid rgb(100, 100, 100);
 	}
 	
 

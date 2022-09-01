@@ -301,6 +301,7 @@ pre code {
 .row {
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: row;
 	box-sizing: border-box;
 	align-items: stretch;
 	padding-left: 2%;
@@ -1039,14 +1040,8 @@ input[type="radio"]+label:before {
 
 	}
 
-	img.izquierda:hover {
-		transform: translateX(99px) scale(2);
-		position: absolute;
-		z-index: 10000;
-	}
-
-	img.derecha:hover {
-		transform: translateX(-99px) scale(2);
+	.zoomImageProduct:hover {
+		transform: scale(2);
 		position: absolute;
 		z-index: 10000;
 	}
@@ -1059,46 +1054,76 @@ input[type="radio"]+label:before {
 		margin-left: 10%;
 		text-align: center;
 	}
-
-	.btnComprarPrincipal {
-		text-align: center;
-		width: 100px;
-		margin-left: 20%;
-		font-size: 8px;
-		padding: 0;
-		text-align: center;
-	}
+	.btnComprar {
+		padding: 15px 25px;
+		border: unset;
+		border-radius: 15px;
+		color: #212121;
+		z-index: 1;
+		background: #e8e8e8;
+		position: relative;
+		font-weight: 1000;
+		font-size: 17px;
+		-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+		box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+		transition: all 250ms;
+		overflow: hidden;
+	   }
+	   
+	   .btnComprar::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 0;
+		border-radius: 15px;
+		background-color: #212121;
+		z-index: -1;
+		-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+		box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+		transition: all 250ms
+	   }
+	   
+	   .btnComprar:hover {
+		color: #e8e8e8;
+	   }
+	   
+	   .btnComprar:hover::before {
+		width: 100%;
+	   }
+	   
 
 	#ninos .col-4 {
-		width: 42%;
+		width: 100%;
 		margin-bottom: 1in;
 		text-align: center;
 		margin-right: 8%;
 	}
 
 	#tallaS .col-4 {
-		width: 42%;
+		width: 100%;
 		margin-bottom: 1in;
 		text-align: center;
 		margin-right: 8%;
 	}
 
 	#tallaM .col-4 {
-		width: 42%;
+		width: 100%;
 		margin-bottom: 1in;
 		text-align: center;
 		margin-right: 8%;
 	}
 
 	#tallaL .col-4 {
-		width: 42%;
+		width: 100%;
 		margin-bottom: 1in;
 		text-align: center;
 		margin-right: 8%;
 	}
 
 	#tallaXL .col-4 {
-		width: 42%;
+		width: 100%;
 		margin-bottom: 1in;
 		text-align: center;
 		margin-right: 8%;
@@ -2587,10 +2612,45 @@ body.is-mobile.landing #footer {
 	margin-bottom: 30px;
 	border-radius: 10px;
 }
-
-.btnComprarPrincipal {
-	text-align: center;
-}
+.btnComprar {
+	padding: 15px 25px;
+	border: unset;
+	border-radius: 15px;
+	color: #212121;
+	z-index: 1;
+	background: #e8e8e8;
+	position: relative;
+	font-weight: 1000;
+	font-size: 17px;
+	-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	transition: all 250ms;
+	overflow: hidden;
+   }
+   
+   .btnComprar::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	border-radius: 15px;
+	background-color: #212121;
+	z-index: -1;
+	-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	transition: all 250ms
+   }
+   
+   .btnComprar:hover {
+	color: #e8e8e8;
+   }
+   
+   .btnComprar:hover::before {
+	width: 100%;
+   }
+   
 
 .logoInsta {
 	width: 3%;
@@ -2606,13 +2666,253 @@ body.is-mobile.landing #footer {
 	margin-right: 0.5%;
 }
 
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+#menudesplegable{
+width: 100%;
+margin: 2%;
+}
+.desplegableniños{
+	text-align: center;
+    font-size: 200%;
+	width: 100%;	
+	text-decoration: none;
+	border: 2px solid white;
+	padding: 2.5%;
+}
+.desplegableniños {
+	padding: 15px 25px;
+	border: unset;
+	border-radius: 15px;
+	color: #212121;
+	z-index: 1;
+	background: #e8e8e8;
+	position: relative;
+	font-weight: 1000;
+	font-size: 17px;
+	-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	transition: all 250ms;
+	overflow: hidden;
+   }
+   
+   .desplegableniños::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	border-radius: 15px;
+	background-color: #212121;
+	z-index: -1;
+	-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	transition: all 250ms
+   }
+   
+   .desplegableniños:hover {
+	color: #e8e8e8;
+   }
+   
+   .desplegableniños:hover::before {
+	width: 100%;
+   }
+.desplegableS{
+	text-align: center;
+    font-size: 200%;
+	width: 100%;	
+	text-decoration: none;
+	border: 2px solid white;
+	padding: 2.5%;
+}
+.desplegableS {
+	padding: 15px 25px;
+	border: unset;
+	border-radius: 15px;
+	color: #212121;
+	z-index: 1;
+	background: #e8e8e8;
+	position: relative;
+	font-weight: 1000;
+	font-size: 17px;
+	-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	transition: all 250ms;
+	overflow: hidden;
+   }
+   
+   .desplegableS::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	border-radius: 15px;
+	background-color: #212121;
+	z-index: -1;
+	-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	transition: all 250ms
+   }
+   
+   .desplegableS:hover {
+	color: #e8e8e8;
+   }
+   
+   .desplegableS:hover::before {
+	width: 100%;
+   }
+.desplegableM{
+	text-align: center;
+    font-size: 200%;
+	width: 100%;	
+	text-decoration: none;
+	border: 2px solid white;
+	padding: 2.5%;
+}
+.desplegableM {
+	padding: 15px 25px;
+	border: unset;
+	border-radius: 15px;
+	color: #212121;
+	z-index: 1;
+	background: #e8e8e8;
+	position: relative;
+	font-weight: 1000;
+	font-size: 17px;
+	-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	transition: all 250ms;
+	overflow: hidden;
+   }
+   
+   .desplegableM::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	border-radius: 15px;
+	background-color: #212121;
+	z-index: -1;
+	-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	transition: all 250ms
+   }
+   
+   .desplegableM:hover {
+	color: #e8e8e8;
+   }
+   
+   .desplegableM:hover::before {
+	width: 100%;
+   }
+.desplegableL{
+	text-align: center;
+    font-size: 200%;
+	width: 100%;	
+	text-decoration: none;
+	border: 2px solid white;
+	padding: 2.5%;
+}
+.desplegableL{
+	padding: 15px 25px;
+	border: unset;
+	border-radius: 15px;
+	color: #212121;
+	z-index: 1;
+	background: #e8e8e8;
+	position: relative;
+	font-weight: 1000;
+	font-size: 17px;
+	-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	transition: all 250ms;
+	overflow: hidden;
+   }
+   
+   .desplegableL::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	border-radius: 15px;
+	background-color: #212121;
+	z-index: -1;
+	-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	transition: all 250ms
+   }
+   
+   .desplegableL:hover {
+	color: #e8e8e8;
+   }
+   
+   .desplegableL:hover::before {
+	width: 100%;
+   }
+.desplegableXL{
+	text-align: center;
+    font-size: 200%;
+	width: 100%;	
+	text-decoration: none;
+	border: 2px solid white;
+	padding: 2.5%;
+}
+.desplegableXL {
+	padding: 15px 25px;
+	border: unset;
+	border-radius: 15px;
+	color: #212121;
+	z-index: 1;
+	background: #e8e8e8;
+	position: relative;
+	font-weight: 1000;
+	font-size: 17px;
+	-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	transition: all 250ms;
+	overflow: hidden;
+   }
+   
+   .desplegableXL::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	border-radius: 15px;
+	background-color: #212121;
+	z-index: -1;
+	-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+	transition: all 250ms
+   }
+   
+   .desplegableXL:hover {
+	color: #e8e8e8;
+   }
+   
+   .desplegableXL:hover::before {
+	width: 100%;
+   }
+
 #niñosTitle {
 	margin-left: 45%;
 	margin-top: 5%;
 }
 
 #tallaSTitle {
-	margin-left: 45%;
+	margin-left: 0%;
 	margin-top: 5%;
 }
 
@@ -2632,30 +2932,240 @@ body.is-mobile.landing #footer {
 }
 
 @media screen and (max-width: 736px) {
-	#niñosTitle {
-		margin-left: 38%;
-		margin-top: 5%;
-	}
-
-	#tallaSTitle {
-		margin-left: 38%;
-		margin-top: 5%;
-	}
-
-	#tallaMTitle {
-		margin-left: 38%;
-		margin-top: 5%;
-	}
-
-	#tallaLTitle {
-		margin-left: 38%;
-		margin-top: 5%;
-	}
-
-	#tallaXLTitle {
-		margin-left: 38%;
-		margin-top: 5%;
-	}
+	#menudesplegable{
+		width: 90%;
+		margin: 2%;
+		}
+		.desplegableniños{
+			text-align: center;
+			font-size: 200%;
+			width: 100%;	
+			text-decoration: none;
+			border: 2px solid white;
+			padding: 2.5%;
+		}
+		.desplegableniños {
+			padding: 15px 25px;
+			border: unset;
+			border-radius: 15px;
+			color: #212121;
+			z-index: 1;
+			background: #e8e8e8;
+			position: relative;
+			font-weight: 1000;
+			font-size: 17px;
+			-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			transition: all 250ms;
+			overflow: hidden;
+		   }
+		   
+		   .desplegableniños::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 0;
+			border-radius: 15px;
+			background-color: #212121;
+			z-index: -1;
+			-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			transition: all 250ms
+		   }
+		   
+		   .desplegableniños:hover {
+			color: #e8e8e8;
+		   }
+		   
+		   .desplegableniños:hover::before {
+			width: 100%;
+		   }
+		.desplegableS{
+			text-align: center;
+			font-size: 200%;
+			width: 100%;	
+			text-decoration: none;
+			border: 2px solid white;
+			padding: 2.5%;
+		}
+		.desplegableS {
+			padding: 15px 25px;
+			border: unset;
+			border-radius: 15px;
+			color: #212121;
+			z-index: 1;
+			background: #e8e8e8;
+			position: relative;
+			font-weight: 1000;
+			font-size: 17px;
+			-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			transition: all 250ms;
+			overflow: hidden;
+		   }
+		   
+		   .desplegableS::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 0;
+			border-radius: 15px;
+			background-color: #212121;
+			z-index: -1;
+			-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			transition: all 250ms
+		   }
+		   
+		   .desplegableS:hover {
+			color: #e8e8e8;
+		   }
+		   
+		   .desplegableS:hover::before {
+			width: 100%;
+		   }
+		.desplegableM{
+			text-align: center;
+			font-size: 200%;
+			width: 100%;	
+			text-decoration: none;
+			border: 2px solid white;
+			padding: 2.5%;
+		}
+		.desplegableM {
+			padding: 15px 25px;
+			border: unset;
+			border-radius: 15px;
+			color: #212121;
+			z-index: 1;
+			background: #e8e8e8;
+			position: relative;
+			font-weight: 1000;
+			font-size: 17px;
+			-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			transition: all 250ms;
+			overflow: hidden;
+		   }
+		   
+		   .desplegableM::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 0;
+			border-radius: 15px;
+			background-color: #212121;
+			z-index: -1;
+			-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			transition: all 250ms
+		   }
+		   
+		   .desplegableM:hover {
+			color: #e8e8e8;
+		   }
+		   
+		   .desplegableM:hover::before {
+			width: 100%;
+		   }
+		.desplegableL{
+			text-align: center;
+			font-size: 200%;
+			width: 100%;	
+			text-decoration: none;
+			border: 2px solid white;
+			padding: 2.5%;
+		}
+		.desplegableL{
+			padding: 15px 25px;
+			border: unset;
+			border-radius: 15px;
+			color: #212121;
+			z-index: 1;
+			background: #e8e8e8;
+			position: relative;
+			font-weight: 1000;
+			font-size: 17px;
+			-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			transition: all 250ms;
+			overflow: hidden;
+		   }
+		   
+		   .desplegableL::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 0;
+			border-radius: 15px;
+			background-color: #212121;
+			z-index: -1;
+			-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			transition: all 250ms
+		   }
+		   
+		   .desplegableL:hover {
+			color: #e8e8e8;
+		   }
+		   
+		   .desplegableL:hover::before {
+			width: 100%;
+		   }
+		.desplegableXL{
+			text-align: center;
+			font-size: 200%;
+			width: 100%;	
+			text-decoration: none;
+			border: 2px solid white;
+			padding: 2.5%;
+		}
+		.desplegableXL {
+			padding: 15px 25px;
+			border: unset;
+			border-radius: 15px;
+			color: #212121;
+			z-index: 1;
+			background: #e8e8e8;
+			position: relative;
+			font-weight: 1000;
+			font-size: 17px;
+			-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			transition: all 250ms;
+			overflow: hidden;
+		   }
+		   
+		   .desplegableXL::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 0;
+			border-radius: 15px;
+			background-color: #212121;
+			z-index: -1;
+			-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			transition: all 250ms
+		   }
+		   
+		   .desplegableXL:hover {
+			color: #e8e8e8;
+		   }
+		   
+		   .desplegableXL:hover::before {
+			width: 100%;
+		   }
 
 	.logoInsta {
 		width: 15%;

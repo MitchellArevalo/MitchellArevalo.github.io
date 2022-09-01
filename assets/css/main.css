@@ -1018,12 +1018,18 @@ input[type="radio"]+label:before {
 }
 
 .precio {
+	color: white;
 	margin-left: 0%;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	font-weight: bold;
 	letter-spacing: 2px;
 
+}
+.zoomImageProduct:active {
+	transform: scale(1.5);
+	position: absolute;
+	z-index: 10000;
 }
 
 @media screen and (max-width: 480px) {
@@ -1040,7 +1046,8 @@ input[type="radio"]+label:before {
 
 	}
 	
-	.zoomImageProduct:active {
+
+	.zoomImageProduct:active  {
 		transform: scale(1.5);
 		position: absolute;
 		z-index: 10000;
@@ -1051,7 +1058,7 @@ input[type="radio"]+label:before {
 		margin: 2%;
 	}
 	.btnComprar {
-		padding: 15px 25px;
+		
 		border: unset;
 		border-radius: 15px;
 		color: #212121;
@@ -1059,7 +1066,7 @@ input[type="radio"]+label:before {
 		background: #e8e8e8;
 		position: relative;
 		font-weight: 1000;
-		font-size: 17px;
+		font-size: 7px;
 		-webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
 		box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
 		transition: all 250ms;
@@ -1092,7 +1099,7 @@ input[type="radio"]+label:before {
 
 	#ninos .col-4 {
 		width: 100%;
-		margin-bottom: 1in;
+		margin-bottom: 0.5in;
 		text-align: center;
 		
 	}
@@ -1126,9 +1133,9 @@ input[type="radio"]+label:before {
 	}
 
 	.precio {
-		margin-left: 10%;
+		/* margin-left: 10%; */
 		margin-top: -20px;
-		margin-bottom: 5px;
+		margin-bottom: 10px;
 		font-weight: bold;
 		letter-spacing: 2px;
 
@@ -2902,30 +2909,6 @@ margin: 2%;
 	width: 100%;
    }
 
-#niñosTitle {
-	margin-left: 45%;
-	margin-top: 5%;
-}
-
-#tallaSTitle {
-	margin-left: 0%;
-	margin-top: 5%;
-}
-
-#tallaMTitle {
-	margin-left: 45%;
-	margin-top: 5%;
-}
-
-#tallaLTitle {
-	margin-left: 45%;
-	margin-top: 5%;
-}
-
-#tallaXLTitle {
-	margin-left: 45%;
-	margin-top: 5%;
-}
 
 @media screen and (max-width: 736px) {
 	#menudesplegable{
